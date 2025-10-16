@@ -43,10 +43,10 @@
       "startDate": "1403-07",
       "endDate": null,
       "summary": "طراحی و صفحه آرایی، گرافیک شبکه‌های اجتماعی، رابط کاربری سایت",
-      "highlights": null,
-      "responsibilities": null,
-      "achievements": null,
-      "skills": null
+      "highlights": [],
+      "responsibilities": [],
+      "achievements": [],
+      "skills": []
     },
     {
       "name": "تشکل فرهنگی عروج",
@@ -57,12 +57,11 @@
       "startDate": "1400-7",
       "endDate": "1401-9",
       "summary": "طراحی و صفحه آرایی، گرافیک شبکه‌های اجتماعی، رابط کاربری سایت",
-      "highlights": null,
-      "responsibilities": null,
-      "achievements": null,
-      "skills": null
+      "highlights": [],
+      "responsibilities": [],
+      "achievements": [],
+      "skills": []
     }
-
   ],
   "volunteer": [
     {
@@ -89,8 +88,7 @@
       "courses": null
     }
   ],
-  "certificates": [
-  ],
+  "certificates": [],
   "skills": [
     {
       "name": "Figma",

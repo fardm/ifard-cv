@@ -36,7 +36,7 @@ const SKILLS_ICONS: Record<string, any> = {
   Flutter,
 }
 ---
-<Section className={Astro.props.className} title="تجربیات">
+<Section className={Astro.props.className} title="Experience">
   <ul class="flex flex-col">
     {work.map(({ name, startDate, endDate, position, summary, responsibilities, achievements, url, skills, location, location_type }) => {
       const startYear = new Date(startDate).getFullYear()
@@ -95,7 +95,7 @@ const SKILLS_ICONS: Record<string, any> = {
                   <div class="flex flex-col gap-1">
                     <h4>Responsibilities:</h4>
                     <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
-                      {Array.isArray(responsibilities) && responsibilities.map((responsibility: string) => (
+                      {responsibilities.map(responsibility => (
                         <li>{responsibility}</li>
                       ))}
                     </ul>
@@ -106,8 +106,8 @@ const SKILLS_ICONS: Record<string, any> = {
                   <div class="flex flex-col gap-1">
                     <h4>Achievements:</h4>
                     <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
-                      {achievements.map((achievement: string) => (
-                          <li>{achievement}</li>
+                      {achievements.map(achievement => (
+                        <li>{achievement}</li>
                       ))}
                     </ul>
                   </div>
@@ -121,7 +121,7 @@ const SKILLS_ICONS: Record<string, any> = {
 
 
                 <ul class="flex print:hidden flex-wrap gap-2" aria-label="Technologies used">
-                  {skills && Array.isArray(skills) && skills.map((skill: string) => {
+                  {skills && skills.map(skill => {
                     const iconName = skill === "Next.js" ? "Next" : skill
                     const Icon = SKILLS_ICONS[iconName]
                     return (

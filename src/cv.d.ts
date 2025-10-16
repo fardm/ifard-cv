@@ -41,17 +41,12 @@ interface Profiles {
 
 interface Work {
   name: string;
-  position: string | null;
-  location_type: string | null;
-  location: string | null;
+  position: string;
   url: string;
   startDate: DateStr;
   endDate: DateStr | null;
-  summary: string | Highlight;
-  highlights: Highlight | null;
-  responsibilities: Highlight | null;
-  achievements: Highlight | null;
-  skills: Array<string> | null;
+  summary: string;
+  highlights: Highlight;
 }
 
 type DateStr = `${string}-${string}-${string}`;
@@ -147,4 +142,4 @@ interface References {
   reference: string;
 }
 
-type Highlight = Array<string>;
+type Highlight = Array<String>;
