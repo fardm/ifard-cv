@@ -18,8 +18,11 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm@10.18.3
+          echo "$(npm config get prefix)/bin" >> $GITHUB_PATH
+          pnpm --version
 
       - name: Install dependencies
         run: pnpm install
