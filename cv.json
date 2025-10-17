@@ -36,7 +36,7 @@
   "work": [
     {
       "name": "انتشارات نخل سبز",
-      "image": "https://greenpalm.net/wp-content/uploads/2025/05/avatar-300x300.webp",
+      "image": null,
       "position": "طراح گرافیک میدلول",
       "location_type": null,
       "location": null,
@@ -88,7 +88,7 @@
       "studyType": null,
       "startDate": "1404",
       "endDate": null,
-      "image": "/azad.png",
+      "image": null,
       "score": null,
       "courses": null
     }
