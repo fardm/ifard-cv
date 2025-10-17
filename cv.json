@@ -9,38 +9,33 @@
     
   },
   "info": {
-    "email": "email@example.com",
-    "phone": "09123456789",
-    "site": "https://example.com",
-    "birthday": "1990-01-01",
-    "location": "Tehran, Iran",
+    "email": "info@ifard.ir",
+    "phone": null,
+    "site": "ifard.ir",
+    "birthday": "1379",
+    "location": null,
     "soldeirs": "معافیت تحصیلی"
   },
   "social": [
     {
       "network": "linkedin",
-      "username": "john-doe",
+      "username": "ifard_ir",
       "url": "https://linkedin.com/in/john-doe"
     },
     {
       "network": "x",
-      "username": "john-doe",
-      "url": "https://x.com/john-doe"
+      "username": "ifard_ir",
+      "url": "https://x.com/ifard_ir/"
     },
     {
       "network": "instagram",
-      "username": "john-doe",
-      "url": "https://instagram.com/john-doe"
-    },
-    {
-      "network": "telegram",
-      "username": "john-doe",
-      "url": "https://t.me/john-doe"
+      "username": "ifard.ir",
+      "url": "https://instagram.com/ifard.ir"
     },
     {
       "network": "github",
-      "username": "john-doe",
-      "url": "https://github.com/johndoe"
+      "username": "fardm",
+      "url": "https://github.com/fardm"
     }
   ],
   "languages": [
@@ -54,7 +49,7 @@
     {
       "name": "انتشارات نخل سبز",
       "image": "https://greenpalm.net/wp-content/uploads/2025/05/avatar-300x300.webp",
-      "position": "طراح گرافیک میدلول",
+      "position": "طراح گرافیک",
       "location_type": null,
       "location": null,
       "url": "https://greenpalm.pub/",
@@ -68,20 +63,6 @@
         "GitHub",
         "Git"
       ]
-    },
-    {
-      "name": "تشکل فرهنگی عروج",
-      "position": "طراح گرافیک جونیور",
-      "location_type": null,
-      "location": null,
-      "url": "https://orooj.org/",
-      "startDate": "1400-7",
-      "endDate": "1401-9",
-      "summary": "طراحی و صفحه آرایی، گرافیک شبکه‌های اجتماعی، رابط کاربری سایت",
-      "highlights": [],
-      "responsibilities": [],
-      "achievements": [],
-      "skills": []
     }
   ],
   "volunteer": [
@@ -188,8 +169,6 @@
       "isActive": true,
       "description": "کمک به ساخت پرامپت برای ساخت تصویر با هوش مصنوعی",
       "highlights": [
-        "لورم ایپسوم",
-        "لورم ایپسوم"
       ],
       "url": "https://promptsaz.ifard.ir/",
       "github": "https://github.com"
@@ -199,8 +178,6 @@
       "isActive": true,
       "description": "ساخت برنامه بدنسازی",
       "highlights": [
-        "لورم ایپسوم",
-        "لورم ایپسوم"
       ],
       "url": "https://tamrinsaz.ir/"
     }
