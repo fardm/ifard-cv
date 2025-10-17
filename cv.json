@@ -3,7 +3,7 @@
     "name": "حسین فردمحمدی",
     "label": "طراح گرافیک",
     "image": "/me_avatar.jpg",
-    "email": "info@ifard.ir",
+    "email": null,
     "phone": null,
     "url": "https://ifard.ir",
     "summary": "من حسین فردمحمدی هستم. در زمینه‌ی طراحی پوستر و تولید محتوای گرافیکی برای وب و شبکه‌های اجتماعی فعالیت می‌کنم. در طول فعالیتم با گروه‌ها و مجموعه‌های مختلف، همواره تلاش کردم با استفاده از طراحی‌های ساده و خلاقانه پیام هر پروژه را به شکلی واضح و تأثیرگذار به مخاطب منتقل کنم.",
@@ -13,7 +13,7 @@
       "postalCode": "",
       "city": "",
       "countryCode": "",
-      "region": "ایران"
+      "region": ""
     },
     "profiles": [
       {
@@ -36,7 +36,7 @@
   "work": [
     {
       "name": "انتشارات نخل سبز",
-      "image": null,
+      "image": "https://greenpalm.net/wp-content/uploads/2025/05/avatar-300x300.webp",
       "position": "طراح گرافیک میدلول",
       "location_type": null,
       "location": null,
@@ -88,7 +88,7 @@
       "studyType": null,
       "startDate": "1404",
       "endDate": null,
-      "image": null,
+      "image": "/azad.png",
       "score": null,
       "courses": null
     }
