@@ -38,7 +38,7 @@ const SKILLS_ICONS: Record<string, any> = {
 ---
 <Section className={Astro.props.className} title="تجربیات">
   <ul class="flex flex-col">
-    {work.map(({ name, startDate, endDate, position, summary, responsibilities, achievements, url, skills, location, location_type }) => {
+    {work.map(({ name, startDate, endDate, position, summary, responsibilities, achievements, url, skills, location, location_type, image }) => {
       const startYear = new Date(startDate).getFullYear()
       const endYear = endDate != null ? new Date(endDate).getFullYear() : "اکنون"
 
@@ -61,7 +61,8 @@ const SKILLS_ICONS: Record<string, any> = {
 
               {/* name */}
               <div class="mt-2">
-                {url ? (<a class="font-medium text-skin-hue" href={url} title={`Ver ${name}`} target="_blank">{name}</a>) : (<span>{name}</span>)}
+                
+                {url ? (<a class="font-medium text-skin-hue" href={url} title={`Ver ${name}`} target="_blank">{image && image !== "null" && (<img class="ml-1 hidden w-5 self-start md:inline-block print:hidden" src={image} alt={name} />)}{name}</a>) : (<span>{name}</span>)}
                   {url &&
                     <span class="inline-block text-skin-hue print:[&>svg]:hidden transform -scale-x-100">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block w-4 h-4 ml-1 transition-transform translate-y-px shrink-0 group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
