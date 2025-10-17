@@ -5,25 +5,51 @@
     "image": "/me_avatar.jpg",
     "summary": "من حسین فردمحمدی هستم. در زمینه‌ی طراحی پوستر و تولید محتوای گرافیکی برای وب و شبکه‌های اجتماعی فعالیت می‌کنم. در طول فعالیتم با گروه‌ها و مجموعه‌های مختلف، همواره تلاش کردم با استفاده از طراحی‌های ساده و خلاقانه پیام هر پروژه را به شکلی واضح و تأثیرگذار به مخاطب منتقل کنم.",
     "theme": "default",
-    "url": "/",
-    "profiles": [
-      {
-        "network": "LinkedIn",
-        "username": "john-doe",
-        "url": "https://linkedin.com/in/john-doe"
-      },
-      {
-        "network": "X",
-        "username": "john-doe",
-        "url": "https://x.com/john-doe"
-      },
-      {
-        "network": "GitHub",
-        "username": "johndoe",
-        "url": "https://github.com/johndoe"
-      }
-    ]
+    "url": "/"
+    
   },
+  "info": {
+    "email": "email@example.com",
+    "phone": "09123456789",
+    "site": "https://example.com",
+    "birthday": "1990-01-01",
+    "location": "Tehran, Iran",
+    "soldeirs": "معافیت تحصیلی"
+  },
+  "social": [
+    {
+      "network": "linkedin",
+      "username": "john-doe",
+      "url": "https://linkedin.com/in/john-doe"
+    },
+    {
+      "network": "x",
+      "username": "john-doe",
+      "url": "https://x.com/john-doe"
+    },
+    {
+      "network": "instagram",
+      "username": "john-doe",
+      "url": "https://instagram.com/john-doe"
+    },
+    {
+      "network": "telegram",
+      "username": "john-doe",
+      "url": "https://t.me/john-doe"
+    },
+    {
+      "network": "github",
+      "username": "john-doe",
+      "url": "https://github.com/johndoe"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_the_United_Kingdom_%281-1%29.svg",
+      "level": "A1"
+    }
+  ],
   "work": [
     {
       "name": "انتشارات نخل سبز",
@@ -139,12 +165,6 @@
         "Source Code",
         "Git"
       ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "A1"
     }
   ],
   "interests": [

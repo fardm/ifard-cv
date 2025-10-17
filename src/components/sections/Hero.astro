@@ -1,22 +1,21 @@
 ---
-import { basics } from "@cv";
+import { basics, info, social, languages } from "@cv";
 import Section from "@/components/Section.astro";
-import X from "@/icons/X.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
+import XIcon from "@/icons/X.astro";
 import GitHub from "@/icons/GitHub.astro";
-import type { SocialIcon } from "@/types";
-
-const { name, label, image, profiles } = basics;
-
-const SOCIAL_ICONS: SocialIcon = {
-	GitHub,
-	LinkedIn,
-	X,
-};
-
-const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
-const linkedUrl = linkedInfo?.url;
-const printInfo = [linkedUrl].filter(Boolean).join(" • ");
+import Instagram from "@/icons/Instagram.astro";
+import Telegram from "@/icons/Telegram.astro";
+const { name, label, image } = basics;
+const { email, phone, site, birthday, location, soldeirs } = info;
+// const printInfo = "";
+const iconMap = {
+    linkedin: LinkedIn,
+    x: XIcon,
+    github: GitHub,
+    instagram: Instagram,
+    telegram: Telegram,
+} as const;
 ---
 
 <Section>
@@ -24,33 +23,9 @@ const printInfo = [linkedUrl].filter(Boolean).join(" • ");
 		<div class="info">
 			<h1>{name}</h1>
 			<h2>{label}</h2>
-
-			<footer class="print">
-				{printInfo}
-			</footer>
-			<footer class="no-print">
-                {/* removed email/phone actions */}
-				{
-					profiles.map(({ network, url }) => {
-						const Icon = SOCIAL_ICONS[network];
-
-						return (
-							<a href={url} title={`Visit ${name} profile on ${network}`} target="_blank" rel="noopener noreferrer">
-								<Icon />
-							</a>
-						);
-					})
-				}
-				<div class="no-print footer-button max-sm:hidden group flex h-8 w-9 cursor-pointer items-center justify-center rounded-md text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted [&>span]:hover:text-skin-inverted">
-					<svg xmlns="http://www.w3.org/2000/svg" class="icon h-6 w-6 icon-tabler icon-tabler-command"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-						<path d="M7 9a2 2 0 1 1 2 -2v10a2 2 0 1 1 -2 -2h10a2 2 0 1 1 -2 2v-10a2 2 0 1 1 2 2h-10"></path>
-					</svg>
-				</div>
-			</footer>
 		</div>
 		<figure class="print:hidden w-fit relative">
-			<img class="shadow-lg shadow-skin-hues" src={image} alt={name} />
+			<img class="shadow-lg shadow-skin-hues aspect-square w-32 rounded-2xl bg-cover" src={image} alt={name} />
 			<div class="pointer-events-none absolute -inset-2">
 				<div class="absolute -inset-y-8 right-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
 				<div class="absolute -inset-y-8 left-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
@@ -73,8 +48,8 @@ const printInfo = [linkedUrl].filter(Boolean).join(" • ");
 			<svg xmlns="http://www.w3.org/2000/svg" class="md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
 		</div>
 		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">ایمیل</h3>
-			<div class="text-base text-skin">مقدار متغیر</div>
+			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">ایمیل</h4>
+			<div class="text-base text-skin">{email}</div>
 		</div>
 	</div>
 
@@ -84,8 +59,8 @@ const printInfo = [linkedUrl].filter(Boolean).join(" • ");
 			<svg xmlns="http://www.w3.org/2000/svg" class="md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-call-icon lucide-phone-call"><path d="M13 2a9 9 0 0 1 9 9"/><path d="M13 6a5 5 0 0 1 5 5"/><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
 		</div>
 		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">شماره تماس</h3>
-			<div class="text-base text-skin">مقدار متغیر</div>
+			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">شماره تماس</h4>
+			<div class="text-base text-skin">{phone}</div>
 		</div>
 	</div>
 
@@ -95,8 +70,8 @@ const printInfo = [linkedUrl].filter(Boolean).join(" • ");
 			<svg xmlns="http://www.w3.org/2000/svg" class="md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link-icon lucide-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
 		</div>
 		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">سایت</h3>
-			<div class="text-base text-skin">مقدار متغیر</div>
+			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">سایت</h4>
+			<div class="text-base text-skin">{site}</div>
 		</div>
 	</div>
 
@@ -106,8 +81,8 @@ const printInfo = [linkedUrl].filter(Boolean).join(" • ");
 			<svg xmlns="http://www.w3.org/2000/svg" class="md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cake-icon lucide-cake"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v3"/><path d="M12 8v3"/><path d="M17 8v3"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg>
 		</div>
 		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">تاریخ تولد</h3>
-			<div class="text-base text-skin">مقدار متغیر</div>
+			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">تاریخ تولد</h4>
+			<div class="text-base text-skin">{birthday}</div>
 		</div>
 	</div>
 
@@ -117,8 +92,8 @@ const printInfo = [linkedUrl].filter(Boolean).join(" • ");
 			<svg xmlns="http://www.w3.org/2000/svg" class="md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
 		</div>
 		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">محل سکونت</h3>
-			<div class="text-base text-skin">مقدار متغیر</div>
+			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">محل سکونت</h4>
+			<div class="text-base text-skin">{location}</div>
 		</div>
 	</div>
 
@@ -128,8 +103,8 @@ const printInfo = [linkedUrl].filter(Boolean).join(" • ");
 			<svg xmlns="http://www.w3.org/2000/svg" class="md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-hat-icon lucide-hard-hat"><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M14 6a6 6 0 0 1 6 6v3"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><rect x="2" y="15" width="20" height="4" rx="1"/></svg>
 		</div>
 		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">سربازی</h3>
-			<div class="text-base text-skin">مقدار متغیر</div>
+			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">سربازی</h4>
+			<div class="text-base text-skin">{soldeirs}</div>
 		</div>
 	</div>
 	
@@ -139,80 +114,45 @@ const printInfo = [linkedUrl].filter(Boolean).join(" • ");
 <hr class="border border-solid border-[1px] border-skin-muted/40 dark:border-white/10 w-2/3">
 <section class="grid gap-4">
 
-	<!-- linkedin -->
-	<div class="flex items-center gap-2">
-		<div class="ml-1 bg-skin-muted/20 dark:bg-white/10 rounded-full">
-			<svg xmlns="http://www.w3.org/2000/svg" class="md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-		</div>
-		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">لینکدین</h3>
-			<a target="_blank" class="text-base text-skin hover:text-skin-hue decoration-dotted underline-offset-[5px] hover:underline" href="لینک متغیر">مقدار متغیر</a>
-		</div>
-	</div>
-
-	<!-- twitter -->
-	<div class="flex items-center gap-2">
-		<div class="ml-1 bg-skin-muted/20 dark:bg-white/10 rounded-full">
-			<svg xmlns="http://www.w3.org/2000/svg" class="md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-		</div>
-		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">توییتر</h3>
-			<a target="_blank" class="text-base text-skin hover:text-skin-hue decoration-dotted underline-offset-[5px] hover:underline" href="لینک متغیر">مقدار متغیر</a>
-		</div>
-	</div>
-
-	<!-- instagram -->
-	<div class="flex items-center gap-2">
-		<div class="ml-1 bg-skin-muted/20 dark:bg-white/10 rounded-full">
-			<svg xmlns="http://www.w3.org/2000/svg" class="md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-		</div>
-		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">اینستاگرام</h3>
-			<a target="_blank" class="text-base text-skin hover:text-skin-hue decoration-dotted underline-offset-[5px] hover:underline" href="لینک متغیر">مقدار متغیر</a>
-		</div>
-	</div>
-
-	<!-- telegram -->
-	<div class="flex items-center gap-2">
-		<div class="ml-1 bg-skin-muted/20 dark:bg-white/10 rounded-full">
-			<svg xmlns="http://www.w3.org/2000/svg" class="md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-icon lucide-send"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
-		</div>
-		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">تلگرام</h3>
-			<a target="_blank" class="text-base text-skin hover:text-skin-hue decoration-dotted underline-offset-[5px] hover:underline" href="لینک متغیر">مقدار متغیر</a>
-		</div>
-	</div>
-
-	<!-- github -->
-	<div class="flex items-center gap-2">
-		<div class="ml-1 bg-skin-muted/20 dark:bg-white/10 rounded-full">
-			<svg xmlns="http://www.w3.org/2000/svg" class="md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github-icon lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-		</div>
-		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">گیت هاب</h3>
-			<a target="_blank" class="text-base text-skin hover:text-skin-hue decoration-dotted underline-offset-[5px] hover:underline" href="لینک متغیر">مقدار متغیر</a>
-		</div>
-	</div>
+    {social.map(({ network, username, url }) => {
+        const Icon = iconMap[(network || "").toLowerCase() as keyof typeof iconMap];
+        return (
+            <div class="flex items-center gap-2">
+                <div class="ml-1 bg-skin-muted/20 dark:bg-white/10 rounded-full">
+                    {Icon && <Icon />}
+                </div>
+                <div class="grid relative w-full items-baseline justify-between gap-1">
+                    <h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">{network}</h4>
+                    <a target="_blank" class="text-base text-skin hover:text-skin-hue decoration-dotted underline-offset-[5px] hover:underline" href={url}>{username}</a>
+                </div>
+            </div>
+        );
+    })}
 	
 </section>
 
 <!-- language -->
 <hr class="border border-solid border-[1px] border-skin-muted/40 dark:border-white/10 w-2/3">
 <section class="grid gap-4">
-	<div class="flex items-center gap-2">
-		<div class="w-11 ml-1">
-			<img class="md:inline-block self-center" src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_the_United_Kingdom_%281-1%29.svg" alt="" />
+
+	{languages.map(({ language, flag, level }) => (
+		<div class="flex items-center gap-2">
+			<div class="w-11 ml-1">
+				<img class="md:inline-block self-center" src={flag} alt={language} />
+			</div>
+			<div class="grid relative w-full items-baseline justify-between gap-1">
+				<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">{language}</h4>
+				<div class="text-base text-skin">{level}</div>
+			</div>
 		</div>
-		<div class="grid relative w-full items-baseline justify-between gap-1">
-			<h4 class="items-baseline gap-x-2 gap-y-0.5 text-skin-muted font-normal">انگلیسی</h3>
-			<div class="text-base text-skin">مقدار متغیر (سطح)</div>
-		</div>
-	</div>
+	))}
+
 </section>
 <br>
 
 
 <style>
+
 	.info {
 		@apply flex flex-col gap-1 pr-0 print:gap-0 print:pr-0;
 	}
@@ -225,9 +165,7 @@ const printInfo = [linkedUrl].filter(Boolean).join(" • ");
 		@apply text-balance text-xl font-medium text-skin-hue print:text-lg;
 	}
 
-	img {
-		@apply aspect-square w-32 rounded-2xl bg-cover;
-	}
+
 
 	span {
 		@apply flex items-center gap-1 text-xs text-skin-hue ;
@@ -265,39 +203,45 @@ const printInfo = [linkedUrl].filter(Boolean).join(" • ");
 </style>
 
 <script>
-	const select = document.getElementById("themeSwitch") as HTMLSelectElement;
-	const theme = localStorage.getItem("theme");
-	const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    // @ts-nocheck
+    const select = document.getElementById("themeSwitch");
+    const theme = localStorage.getItem("theme");
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 
-	if (theme !== null) {
-		select.value = theme;
-	} else {
-		select.value = systemTheme;
-	}
+    if (theme !== null && select instanceof HTMLSelectElement) {
+        select.value = theme;
+    } else if (select instanceof HTMLSelectElement) {
+        select.value = systemTheme;
+    }
 
-	function updateTheme(value: string) {
-		const theme = value === "system" ? systemTheme : value;
-		document.documentElement.classList.remove("light", "dark");
-		document.documentElement.classList.add(theme);
-		localStorage.setItem("theme", value);
-	}
+    /** @type {(value: string) => void} */
+    const updateTheme = (value) => {
+        const resolved = value === "system" ? systemTheme : value;
+        document.documentElement.classList.remove("light", "dark");
+        document.documentElement.classList.add(resolved);
+        localStorage.setItem("theme", value);
+    };
 
-	updateTheme(select.value);
+    if (select instanceof HTMLSelectElement) updateTheme(select.value);
 
-	select.addEventListener("change", (event: Event) => {
-		const select = event.target as HTMLSelectElement;
-		updateTheme(select.value);
-	});
+    if (select instanceof HTMLSelectElement) {
+        select.addEventListener("change", (event) => {
+            const target = event.target;
+            if (!(target instanceof HTMLSelectElement)) return;
+            updateTheme(target.value);
+        });
+    }
 
-	// Deshabilitar modo oscuro al imprimir
+	// Disable dark mode before printing
 	window.addEventListener("beforeprint", () => {
 		document.documentElement.classList.remove("dark");
 	});
 
-	// Restaurar el modo oscuro después de imprimir
-	window.addEventListener("afterprint", () => {
-		if (select.value === "dark" || (select.value === "system" && systemTheme === "dark")) {
-			document.documentElement.classList.add("dark");
-		}
-	});
+	// Restore dark mode after printing
+    window.addEventListener("afterprint", () => {
+        if (!(select instanceof HTMLSelectElement)) return;
+        if (select.value === "dark" || (select.value === "system" && systemTheme === "dark")) {
+            document.documentElement.classList.add("dark");
+        }
+    });
 </script>

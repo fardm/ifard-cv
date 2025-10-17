@@ -1,5 +1,6 @@
 export interface CV {
   basics: Basics;
+  info: Info;
   work: Array<Work>;
   volunteer: Array<Volunteer>;
   education: Array<Education>;
@@ -8,6 +9,7 @@ export interface CV {
   publications: Array<Publications>;
   skills: Array<Skills>;
   languages: Array<Languages>;
+  social: Array<Social>;
   interests: Array<Interests>;
   references: Array<References>;
   projects: Array<Projects>;
@@ -18,17 +20,11 @@ interface Basics {
   label: string;
   image: string;
   url: string;
+  theme?: string;
   summary: string;
-  profiles: Array<Profiles>;
 }
 
 
-
-interface Profiles {
-  network: string;
-  username: string;
-  url: string;
-}
 
 interface Work {
   name: string;
@@ -92,8 +88,9 @@ interface Education {
 }
 
 interface Languages {
-  language: Language;
-  fluency: string;
+  language: Language | string;
+  flag: string;
+  level: string;
 }
 
 type Language =
@@ -134,3 +131,19 @@ interface References {
 }
 
 type Highlight = Array<String>;
+
+interface Info {
+  email: string;
+  phone: string;
+  site: string;
+  birthday: string;
+  location: string;
+  soldeirs: string;
+}
+
+interface Social {
+  network: string;
+  username: string;
+  url: string;
+  icon: string;
+}
