@@ -46,7 +46,10 @@
       "highlights": [],
       "responsibilities": [],
       "achievements": [],
-      "skills": []
+      "skills": [
+        "GitHub",
+        "Git"
+      ]
     },
     {
       "name": "تشکل فرهنگی عروج",
@@ -78,8 +81,8 @@
   ],
   "education": [
     {
-      "institution": "دانشگاه آزاد",
-      "url": "https://stateuniversity.edu",
+      "institution": "دانشگاه آزاد اسلامی",
+      "url": "https://iau.ir/",
       "area": "کارشناسی مهندسی نرم افزار",
       "studyType": null,
       "startDate": "1404",
