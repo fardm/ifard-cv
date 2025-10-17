@@ -118,7 +118,7 @@ const iconMap = {
         const Icon = iconMap[(network || "").toLowerCase() as keyof typeof iconMap];
         return (
             <div class="flex items-center gap-2">
-                <div class="ml-1 bg-skin-muted/20 dark:bg-white/10 rounded-full">
+                <div class="ml-1 bg-skin-muted/20 dark:bg-white/10 rounded-full social-icon">
                     {Icon && <Icon />}
                 </div>
                 <div class="grid relative w-full items-baseline justify-between gap-1">
@@ -177,6 +177,11 @@ const iconMap = {
 
 	footer a, footer button {
 		@apply inline-flex size-8 items-center justify-center rounded-md p-1 transition-all duration-500 ease-linear text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted;
+	}
+
+	/* Scope social icon style to this file only; target child SVGs via :global */
+	.social-icon :global(svg) {
+		@apply md:inline-block self-center p-3 text-skin-muted dark:text-white/80 h-11 w-11;
 	}
 
 	@media (width <= 700px) {
