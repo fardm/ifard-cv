@@ -36,10 +36,10 @@
   "work": [
     {
       "name": "انتشارات نخل سبز",
-      "position": null,
+      "position": "طراح گرافیک میدلول",
       "location_type": null,
       "location": null,
-      "url": "https://greenpalm.net/",
+      "url": "https://greenpalm.pub/",
       "startDate": "1403-07",
       "endDate": null,
       "summary": "طراحی و صفحه آرایی، گرافیک شبکه‌های اجتماعی، رابط کاربری سایت",
@@ -50,7 +50,7 @@
     },
     {
       "name": "تشکل فرهنگی عروج",
-      "position": null,
+      "position": "طراح گرافیک جونیور",
       "location_type": null,
       "location": null,
       "url": "https://orooj.org/",
@@ -99,15 +99,6 @@
       ]
     },
     {
-      "name": "Gitlab",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
-    },
-    {
       "name": "HTML",
       "level": "Intermediate",
       "keywords": [
@@ -135,46 +126,6 @@
       ]
     },
     {
-      "name": "Tailwind",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Framework",
-        "Responsive Design"
-      ]
-    },
-    {
-      "name": "TypeScript",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "JavaScript Superset"
-      ]
-    },
-    {
-      "name": "Node",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "JavaScript",
-        "Server"
-      ]
-    },
-    {
-      "name": "MySQL",
-      "level": "Intermediate",
-      "keywords": [
-        "Databases",
-        "SQL",
-        "Data Storage",
-        "Backend"
-      ]
-    },
-    {
       "name": "Git",
       "level": "Intermediate",
       "keywords": [
@@ -191,27 +142,6 @@
         "Collaboration",
         "Source Code",
         "Git"
-      ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Beginner",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
-      ]
-    },
-    {
-      "name": "React",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
       ]
     }
   ],
