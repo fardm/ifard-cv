@@ -18,6 +18,8 @@ import Kotlin from "@/icons/kotlin.astro";
 import Flutter from "@/icons/flutter.astro";
 import Figma from "@/icons/Figma.astro";
 import Gitlab from "@/icons/Gitlab.astro";
+import Wordpress from "@/icons/Wordpress.astro";
+
 
 const SKILLS_ICONS: Record<string, any> = {
 	HTML,
@@ -37,6 +39,7 @@ const SKILLS_ICONS: Record<string, any> = {
 	Flutter,
 	Figma,
 	Gitlab,
+	Wordpress,
 };
 ---
 
@@ -48,7 +51,7 @@ const SKILLS_ICONS: Record<string, any> = {
 				const Icon = SKILLS_ICONS[iconName];
 
 				return (
-					<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids flex items-center gap-1 rounded-md px-2 py-0.5 text-xs text-skin-muted">
+					<li dir="ltr" class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids flex items-center gap-1 rounded-md px-2 py-0.5 text-xs text-skin-muted">
 						{Icon && <Icon />} <span>{name}</span>
 					</li>
 				);
