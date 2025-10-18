@@ -55,13 +55,39 @@
       "url": "https://greenpalm.pub/",
       "startDate": "1403-07",
       "endDate": null,
-      "summary": "طراحی و صفحه آرایی، گرافیک شبکه‌های اجتماعی، رابط کاربری سایت",
-      "highlights": [],
-      "responsibilities": [],
+      "summary": "ناشر ایرانی فعال در حوزه ترجمه و انتشار آثار ادبی و فرهنگی فارسی به زبان‌های خارجی.",
+      "highlights": [
+        "یک"
+      ],
+      "responsibilities": [
+        "بازطراحی رابط کاربری سایت",
+        "طراحی تامبنیل یوتیوب و کاور اینستاگرام"
+      ],
       "achievements": [],
       "skills": [
-        "GitHub",
-        "Git"
+        "WordPress",
+        "Figma",
+        "Illustrator"
+      ]
+    },
+    {
+      "name": "تشکل فرهنگی عروج",
+      "image": "",
+      "position": "طراح گرافیک",
+      "location_type": null,
+      "location": null,
+      "url": "https://greenpalm.pub/",
+      "startDate": "1400-07",
+      "endDate": "1401-09",
+      "summary": "ارائه دوره‌های آموزشی در زمینه سواد رسانه.",
+      "highlights": [],
+      "responsibilities": [
+        "طراحی کاتالوگ و گزارش عملکرد",
+        "طراحی پوستر دوره‌های آموزشی"
+      ],
+      "achievements": [],
+      "skills": [
+        "Photoshop"
       ]
     }
   ],
@@ -93,6 +119,14 @@
   ],
   "certificates": [],
   "skills": [
+    {
+      "name": "WordPress",
+      "level": "Expert",
+      "keywords": [
+        "Design",
+        "UI"
+      ]
+    },
     {
       "name": "Figma",
       "level": "Expert",
