@@ -54,6 +54,29 @@
       --color-button-accent-hover: 0, 185, 255;
       --color-button-muted: 249, 239, 6;
     }
+    [data-theme="custom"] {
+      --color-text-base: 0, 0, 0;
+      --color-text-muted: 120, 120, 120;
+      --color-text-inverted: 255, 255, 255;
+      --color-fill: 245, 245, 245;
+      --muted: 200, 200, 200;
+      --color: 57, 114, 236;
+      --color-button-accent: 57, 114, 236;
+      --color-button-accent-hover: 55, 55, 55;
+      --color-button-muted: 239, 239, 241;
+
+
+/* --color-text-base: rgb(0 0 0);
+--color-text-muted: rgb(120 120 120);
+--color-text-inverted: rgb(255 255 255);
+--color-fill: rgb(245 245 245);
+--muted: rgb(200 200 200);
+--color: rgb(57, 114, 236);
+--color-button-accent: rgb(249 115 22);
+--color-button-accent-hover: rgb(55 55 55);
+--color-button-muted: rgb(239, 239, 241); */
+
+    }
   }
   .dark {
     --color-text-base: 255, 255, 255;
@@ -109,4 +132,28 @@
       --color-button-accent-hover: 0, 185, 255;
       --color-button-muted: 25, 81, 86;
     }
+    [data-theme="custom"] {
+      --color-text-base: 246, 246, 255;
+      --color-text-muted: 205, 208, 230;
+      --color-text-inverted: 255, 255, 255;
+      --color-fill: 26, 31, 43;
+      --muted: 48, 55, 75;
+      --color: 58, 118, 247;
+      --color-button-accent: 58, 118, 247;
+      --color-button-accent-hover: 72, 130, 255;
+      --color-button-muted: 40, 47, 64;
+
+
+      /* --color-text-base: rgb(246, 246, 255);
+      --color-text-muted: rgb(205, 208, 230);
+      --color-text-inverted: rgb(255 255 255);
+      --color-fill: rgb(26, 31, 43);
+      --muted: rgb(48, 55, 75);
+      --color: rgb(58, 118, 247);
+      --color-button-accent: rgb(58, 118, 247);
+      --color-button-accent-hover: rgb(72, 130, 255);
+      --color-button-muted: rgb(40, 47, 64);      */
+ 
+    }
 }
+

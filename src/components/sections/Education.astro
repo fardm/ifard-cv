@@ -10,7 +10,7 @@ import { certificates } from "@cv";
 		{
 			education.map(({ institution, startDate, endDate, area, url, image }) => {
 				const startYear = new Date(startDate).getFullYear();
-				const endYear = endDate != null ? new Date(endDate).getFullYear() : "Actual";
+				const endYear = endDate != null ? new Date(endDate).getFullYear() : "درحال تحصیل";
 				const years = `${startYear} - ${endYear}`;
 
 				return (
