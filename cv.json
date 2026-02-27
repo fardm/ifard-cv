@@ -109,7 +109,7 @@
     {
       "institution": "دانشگاه آزاد اسلامی",
       "url": "https://iau.ir/",
-      "area": "کارشناسی مهندسی نرم افزار",
+      "area": "کارشناسی مهندسی نرم‌افزار",
       "studyType": null,
       "startDate": "1404",
       "endDate": null,
@@ -224,15 +224,16 @@
       "github": "https://github.com/fardm/tamrinsaz-next"
     },
     {
-      "name": "اکستنشن ObsiBook",
+      "name": "پلاگین Book Clipper",
       "isActive": true,
-      "description": "ابزاری برای استخراج اطلاعات کتاب از سایت های مختلف",
+      "description": "ذخیره اطلاعات کتاب در نرم‌افزار ابسیدین",
       "highlights": [
-        "امکان ذخیره مستقیم در نرم‌افزار ابسیدن",
-        "امکان دانلود با فرمت Markdown",
-        "پشتبانی از گودریدز، طاقچه، فیدیبو، کتابراه و بهخوان"
+        "پشتبانی از گودریدز، آمازون، طاقچه و فیدیبو",
+        "ایجاد تمپلیت سفارشی"
       ],
-      "url": "https://github.com/fardm/ObsiBook"
+      "url": "https://www.obsidianstats.com/plugins/book-clipper",
+      "github": "https://github.com/fardm/obsidian-book-clipper"
+
     }
   ]
 }
