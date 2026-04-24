@@ -61,7 +61,7 @@
       ],
       "responsibilities": [
         "بازطراحی رابط کاربری سایت",
-        "طراحی تامبنیل یوتیوب و کاور اینستاگرام"
+        "طراحی تامنیل یوتیوب و کاور اینستاگرام"
       ],
       "achievements": [],
       "skills": [
@@ -157,16 +157,6 @@
       ]
     },
     {
-      "name": "GitHub",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code",
-        "Git"
-      ]
-    },
-    {
       "name": "Figma",
       "level": "Expert",
       "keywords": [
@@ -200,7 +190,7 @@
   ],
   "projects": [
     {
-      "name": "پرامپت‌ساز",
+      "name": "سایت پرامپت‌ساز",
       "isActive": true,
       "description": "ابزاری برای ساخت دقیق‌تر پرامپت‌ها در تولید تصویر با هوش مصنوعی",
       "highlights": [
@@ -212,7 +202,7 @@
       "github": "https://github.com/fardm/PromptSaz"
     },
     {
-      "name": "تمرین‌ساز",
+      "name": "سایت تمرین‌ساز",
       "isActive": true,
       "description": "ابزاری برای ساخت برنامه بدنسازی",
       "highlights": [
